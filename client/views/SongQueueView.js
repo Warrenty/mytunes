@@ -11,7 +11,7 @@ var SongQueueView = Backbone.View.extend({
       }
       this.render();
     },this);
-    this.collection.on('remove', function(song){this.render();},this);
+    this.collection.on('remove', this.render,this);
   },
 
   render: function(){
